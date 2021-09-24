@@ -34,9 +34,9 @@ void insertInTree(Root **root, Root *n) {
 
 void inorden(Root *root) {
     if (root != NULL){
-        preorden(root->left);
+        inorden(root->left);
         printf("%d, ", root->value);
-        preorden(root->right);
+        inorden(root->right);
     }
 }
 
@@ -50,8 +50,16 @@ void preorden(Root *root) {
 
 void posorden(Root *root) {
     if (root != NULL){
-        preorden(root->left);
-        preorden(root->right);
+        posorden(root->left);
+        posorden(root->right);
         printf("%d, ", root->value);
+    }
+}
+
+void clearTree(Root *root) {
+    if (root != NULL){
+        clearTree(root->left);
+        clearTree(root->right);
+        free(root);
     }
 }

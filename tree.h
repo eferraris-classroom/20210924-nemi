@@ -16,5 +16,6 @@ void insertInTree(Root** root, Root* n);
 void inorden(Root* root);
 void preorden(Root* root);
 void posorden(Root* root);
+void clearTree(Root* root);
 
 #endif //BASE_PROJECT_TREE_H
