@@ -12,5 +12,6 @@ typedef struct node {
 } Node;
 
 Node* newNode(int value);
+void insertInTree(Node** root, Node* n);
 
 #endif //BASE_PROJECT_TREE_H
