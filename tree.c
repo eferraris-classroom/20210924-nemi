@@ -6,8 +6,8 @@
 #include <stdlib.h>
 #include "tree.h"
 
-Node *newNode(int value) {
-    Node* aux = (Node*) malloc(sizeof (Node));
+Root *newRoot(int value) {
+    Root* aux = (Root*) malloc(sizeof (Root));
     if (aux == NULL) {
         printf("Not enough memory\n");
         exit(-1);
@@ -18,7 +18,7 @@ Node *newNode(int value) {
     return aux;
 }
 
-void insertInTree(Node **root, Node *n) {
+void insertInTree(Root **root, Root *n) {
     if (*root == NULL){
         *root = n;
     } else {
@@ -32,7 +32,7 @@ void insertInTree(Node **root, Node *n) {
     }
 }
 
-void inorden(Node *root) {
+void inorden(Root *root) {
     if (root != NULL){
         preorden(root->left);
         printf("%d, ", root->value);
@@ -40,7 +40,7 @@ void inorden(Node *root) {
     }
 }
 
-void preorden(Node *root) {
+void preorden(Root *root) {
     if (root != NULL){
         printf("%d, ", root->value);
         preorden(root->left);
@@ -48,7 +48,7 @@ void preorden(Node *root) {
     }
 }
 
-void posorden(Node *root) {
+void posorden(Root *root) {
     if (root != NULL){
         preorden(root->left);
         preorden(root->right);

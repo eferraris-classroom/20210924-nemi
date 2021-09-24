@@ -2,7 +2,7 @@
 #include "tree.h"
 
 int main() {
-    Node* root = newNode(1);
+    Root* root = newRoot(1);
 
     return 0;
 }

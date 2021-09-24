@@ -5,16 +5,16 @@
 #ifndef BASE_PROJECT_TREE_H
 #define BASE_PROJECT_TREE_H
 
-typedef struct node {
+typedef struct root {
     int value;
-    struct node * left;
-    struct node * right;
-} Node;
+    struct root * left;
+    struct root * right;
+} Root;
 
-Node* newNode(int value);
-void insertInTree(Node** root, Node* n);
-void inorden(Node* root);
-void preorden(Node* root);
-void posorden(Node* root);
+Root* newRoot(int value);
+void insertInTree(Root** root, Root* n);
+void inorden(Root* root);
+void preorden(Root* root);
+void posorden(Root* root);
 
 #endif //BASE_PROJECT_TREE_H
