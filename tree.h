@@ -13,5 +13,8 @@ typedef struct node {
 
 Node* newNode(int value);
 void insertInTree(Node** root, Node* n);
+void inorden(Node* root);
+void preorden(Node* root);
+void posorden(Node* root);
 
 #endif //BASE_PROJECT_TREE_H

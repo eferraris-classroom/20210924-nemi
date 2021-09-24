@@ -31,3 +31,27 @@ void insertInTree(Node **root, Node *n) {
         }
     }
 }
+
+void inorden(Node *root) {
+    if (root != NULL){
+        preorden(root->left);
+        printf("%d, ", root->value);
+        preorden(root->right);
+    }
+}
+
+void preorden(Node *root) {
+    if (root != NULL){
+        printf("%d, ", root->value);
+        preorden(root->left);
+        preorden(root->right);
+    }
+}
+
+void posorden(Node *root) {
+    if (root != NULL){
+        preorden(root->left);
+        preorden(root->right);
+        printf("%d, ", root->value);
+    }
+}
