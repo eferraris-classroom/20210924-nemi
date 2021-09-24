@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include "tree.h"
 
 int main() {
-    printf("Hello, World!\n");
+    Node* root = newNode(1);
+
     return 0;
 }
